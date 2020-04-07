@@ -10,6 +10,16 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class ContactController extends Controller
 {
+      /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -39,13 +49,14 @@ class ContactController extends Controller
     public function store(Request $request)
     {
 
-        Contact::create($request->all());
+       $data =  Contact::create($request->all());
+        return var_dump($data);
 
-        toast('Contact details submited!', 'success');
+        // toast('Contact details submited!', 'success');
 
-        Mail::to(request('email'))->send(new ContactMe());
+        // Mail::to(request('email'))->send(new ContactMe($data));
 
-        return redirect()->route('/');
+        // return redirect()->route('/');
 
     }
 

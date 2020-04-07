@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Auth::routes();
 Route::get('/', function () {
     return view('websiteapps');
 });
@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::resource('quote', 'QuoteController');
 
 Route::resource('contact', 'ContactController');
+
+
+
+Route::get('/home', 'HomeController@index')->name('home');

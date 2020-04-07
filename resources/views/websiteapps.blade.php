@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.app')
 @section('content')
 <!--body content wrap start-->
 
@@ -9,7 +9,7 @@
         <div class="row align-items-center justify-content-between">
             <div class="col-md-6 col-lg-6">
                 <div class="hero-content-left text-white mt-lg-0 mt-md-0 mt-5">
-                    <h1 class="text-white">We are Digital Agency & Marketing </h1>
+                    <h1 class="text-white">We are Digital Agency</h1>
                     <p class="lead">Rapidiously conceptualize sustainable process improvements without superior infomediaries. Quickly parallel task 24/365 catalysts for change.</p>
 
                     <!--clients logo start-->
